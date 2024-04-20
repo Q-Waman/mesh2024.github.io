@@ -18,6 +18,27 @@ nav {
     padding: 10px;
 }
 
+/* Asegura la legibilidad del texto en el menú de navegación */
+nav a {
+    color: #e6e6e6; /* Color claro para mejorar la legibilidad */
+    text-decoration: none; /* Elimina subrayado de los enlaces */
+    transition: color 0.3s; /* Suave transición para el color */
+}
+
+nav a:hover {
+    color: #ffffff; /* Color más claro al pasar el mouse */
+}
+
+/* Estilos para la lista del menú de navegación */
+nav ul {
+    list-style: none; /* Elimina los marcadores de lista */
+    padding: 0;
+}
+
+nav ul li {
+    padding: 5px 0; /* Espaciado vertical para los elementos de la lista */
+}
+
 /* Oculta todas las secciones dentro de <main> por defecto */
 #important-dates,
 #posters-abstracts,
