@@ -5,11 +5,9 @@
     display: none;
 }
 
-/* Estilos para la sección visible */
-.visible-section {
+#home {
     display: block;
 }
-
 
 .conference-poster img {
     width: 100%;
