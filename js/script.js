@@ -1,38 +1,40 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Asegurarse de que se seleccionan los enlaces de navegación correctos
-    var navLinks = document.querySelectorAll('nav ul li a');
-    console.log('Enlaces encontrados:', navLinks.length); // Debería mostrar el número de enlaces
-
-    navLinks.forEach(function (link, index) {
-        console.log('Enlace', index, link); // Debería mostrar cada enlace
+    console.log('El DOM está completamente cargado y parseado');
+    
+    // Selecciona todos los enlaces dentro del elemento nav
+    var navLinks = document.querySelectorAll('nav a');
+    console.log(navLinks); // Verificar si los enlaces se seleccionan correctamente
+    
+    navLinks.forEach(function (link) {
+        console.log('Se añadió el evento a:', link.textContent);
 
         link.addEventListener('click', function (event) {
+            console.log('Enlace clickeado:', link.textContent);
             event.preventDefault();
 
-            // Diagnosticar el targetId
+            // Obtener el ID del elemento de destino.
             var targetId = link.getAttribute('data-target');
-            console.log('ID del elemento de destino:', targetId); // Debería mostrar el ID de destino
+            console.log('ID del elemento de destino:', targetId);
 
             var targetSection = document.getElementById(targetId);
-            console.log('Sección de destino encontrada:', targetSection); // Debería mostrar el elemento de la sección o null
+            console.log('Sección de destino:', targetSection);
 
-            // Ocultar todas las secciones
-            document.querySelectorAll('main > section').forEach(function (section) {
+            // Ocultar todas las secciones.
+            var sections = document.querySelectorAll('main > section');
+            console.log('Secciones a ocultar:', sections);
+
+            sections.forEach(function (section) {
                 section.style.display = 'none';
             });
 
-            // Mostrar la sección de destino
+            // Mostrar la sección de destino.
             if (targetSection) {
                 targetSection.style.display = 'block';
-            } else {
-                // Si no se encuentra la sección, mostrar un error en la consola
-                console.error('No se encontró la sección con ID:', targetId);
+                console.log('Sección mostrada:', targetId);
             }
         });
     });
 });
-
-
 
 
 let slideIndex = 0;
