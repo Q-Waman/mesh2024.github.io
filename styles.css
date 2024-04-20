@@ -65,3 +65,54 @@
 #important-dates tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+
+/* Estilos para centrar el carrusel y las imágenes */
+#posters-abstracts {
+    text-align: center;
+}
+
+.carousel {
+    width: 70%; /* Ancho del carrusel */
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para la descripción */
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Ancho de los controles */
+}
+
+/* Estilos para hacer que los controles aparezcan sobre la imagen */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev-icon {
+    left: 0;
+}
+
+.carousel-control-next-icon {
+    right: 0;
+}
