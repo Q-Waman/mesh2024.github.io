@@ -12,33 +12,34 @@ header {
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
+    background: transparent; /* Se ajusta para que no interfiera con las cajas individuales */
+    text-align: center; /* Alinea los elementos del menú en el centro */
 }
 
-/* Asegura la legibilidad del texto en el menú de navegación */
-nav a {
-    color: #e6e6e6; /* Color claro para mejorar la legibilidad */
-    text-decoration: none; /* Elimina subrayado de los enlaces */
-    transition: color 0.3s; /* Suave transición para el color */
-}
-
-nav a:hover {
-    color: #ffffff; /* Color más claro al pasar el mouse */
-}
-
-/* Estilos para la lista del menú de navegación */
 nav ul {
-    list-style: none; /* Elimina los marcadores de lista */
-    padding: 0;
+    display: flex; /* Dispone los elementos del menú en línea */
+    justify-content: center; /* Centra los elementos de la lista en el contenedor */
+    padding-left: 0; /* Elimina el padding que por defecto tienen las listas */
+    margin: 0; /* Elimina el margen por defecto */
 }
 
 nav ul li {
-    padding: 5px 0; /* Espaciado vertical para los elementos de la lista */
+    list-style-type: none; /* Elimina los marcadores de lista */
+    margin: 10px; /* Margen alrededor de los elementos de la lista */
 }
 
+nav ul li a {
+    display: block; /* Hace que los enlaces llenen las cajas */
+    padding: 10px 20px; /* Espaciado dentro de las cajas */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para las cajas */
+    color: #e6e6e6; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados para las cajas */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo un poco más claro al pasar el mouse */
+}
 /* Oculta todas las secciones dentro de <main> por defecto */
 #important-dates,
 #posters-abstracts,
