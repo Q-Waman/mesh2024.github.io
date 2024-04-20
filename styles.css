@@ -36,3 +36,32 @@
 .forms-section button:hover {
     background-color: #0056b3;
 }
+
+#important-dates h2 {
+    font-size: 24px; /* Ajusta el tamaño según prefieras */
+    font-weight: bold; /* Ya está en negrita por el <strong> en el HTML, pero esto es para asegurar */
+    margin-bottom: 20px;
+}
+
+#important-dates table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#important-dates th, 
+#important-dates td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#important-dates th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Estilo para las filas pares de la tabla para mejorar la legibilidad */
+#important-dates tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
