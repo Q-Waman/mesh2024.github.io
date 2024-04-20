@@ -1,7 +1,13 @@
-/* Agrega estos estilos al archivo styles.css existente */
-#important-dates, #posters-abstracts, #speakers {
+/* Oculta todas las secciones dentro de <main> por defecto */
+main > section {
     display: none;
 }
+
+/* Estilos para la sección visible */
+.visible-section {
+    display: block;
+}
+
 
 .conference-poster img {
     width: 100%;
