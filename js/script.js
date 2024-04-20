@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Ocultar todas las secciones al inicio
-    document.querySelectorAll('main > section').forEach(function (section) {
-        section.style.display = 'none';
-    });
-
     var navLinks = document.querySelectorAll('aside nav ul li a');
 
     navLinks.forEach(function (link) {
