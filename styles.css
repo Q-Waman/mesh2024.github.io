@@ -76,46 +76,45 @@
 }
 
 .carousel {
-    width: 70%; /* Ancho del carrusel */
-    margin: 0 auto;
-}
-
-.carousel-inner {
     position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: auto;
+.carousel-items .carousel-item {
+    display: none; /* Hide all items by default */
+    text-align: center;
 }
 
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para la descripción */
-    color: #fff;
+.carousel-items .active {
+    display: block; /* Show active item */
+}
+
+.carousel-control {
+    cursor: pointer;
     position: absolute;
-    bottom: 0;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    /* Position the "next button" to the right */
+}
+
+.carousel-control.prev {
     left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-control.next {
     right: 0;
-    padding: 20px;
+    border-radius: 0 3px 3px 0;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%; /* Ancho de los controles */
-}
-
-/* Estilos para hacer que los controles aparezcan sobre la imagen */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.carousel-control-prev-icon {
-    left: 0;
-}
-
-.carousel-control-next-icon {
-    right: 0;
+.carousel-control:hover {
+    background-color: rgba(0,0,0,0.8);
 }
