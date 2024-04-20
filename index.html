@@ -25,6 +25,8 @@
             <h1>Bienvenidos a la Conferencia MESH2024</h1>
             <p>Aquí va el texto introductorio o informativo sobre la conferencia.</p>
         </section>
+
+        
         <section class="forms-section">
             <button onclick="window.location.href='URL_DEL_FORM_INSCRIPCION';">Inscripción</button>
             <button onclick="window.location.href='URL_DEL_FORM_RESUMENES';">Convocatoria de Resúmenes</button>
@@ -54,38 +56,32 @@
                 </tr>
             </table>
         </section>
-                <section id="posters-abstracts">
-            <h2 style="text-align: center;">Posters y Abstracts</h2>
+
+        
+        <section id="posters-abstracts">
+            <h2>Posters y Abstracts</h2>
             <div class="carousel">
-                <div class="carousel-inner">
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-items">
+                    <!-- Individual item -->
                     <div class="carousel-item active">
                         <img src="images/poster1.jpg" alt="Poster 1">
                         <div class="carousel-caption">
                             <h3>Autor del Poster 1</h3>
-                            <p>Descripción del Poster 1. Puede ser un texto largo que se extienda por varias líneas.</p>
+                            <p>Descripción del Poster 1...</p>
                         </div>
                     </div>
-                    <!-- Agrega más divs .carousel-item para cada poster y descripción -->
-                    <!-- Ejemplo de otro poster -->
-                    <div class="carousel-item">
-                        <img src="images/poster2.jpg" alt="Poster 2">
-                        <div class="carousel-caption">
-                            <h3>Autor del Poster 2</h3>
-                            <p>Descripción del Poster 2.</p>
-                        </div>
-                    </div>
-                    <!-- Continúa añadiendo más posters y descripciones según sea necesario -->
+                    <!-- Repeat for each poster -->
+                    <!-- ... -->
                 </div>
-                <a class="carousel-control-prev" href="#posters-abstracts-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#posters-abstracts-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+        
+                <!-- Controls -->
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
             </div>
         </section>
+
+        
         <section id="speakers">
             <h2 class="speakers-title">Ponentes</h2>
             <div class="speakers-gallery">
