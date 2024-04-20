@@ -4,18 +4,19 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
             event.preventDefault();
+
+            // Obtener el id del elemento de destino.
             var targetId = event.target.getAttribute('data-target');
-            var sections = document.querySelectorAll('main section');
-            
-            // Oculta todas las secciones
-            sections.forEach(function (section) {
-                section.style.display = 'none';
+            var targetSection = document.getElementById(targetId);
+
+            // Ocultar todas las secciones.
+            document.querySelectorAll('main > section').forEach(function (section) {
+                section.classList.remove('visible-section');
             });
 
-            // Muestra la sección seleccionada
-            var targetSection = document.getElementById(targetId);
+            // Si la sección existe, muéstrala.
             if (targetSection) {
-                targetSection.style.display = 'block';
+                targetSection.classList.add('visible-section');
             }
         });
     });
