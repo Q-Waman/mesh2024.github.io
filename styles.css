@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f8f8f8;
+    overflow: auto;
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+aside nav ul li a:hover {
+    background-color: #ddd;
+}
+
+main {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+
+
