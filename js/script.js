@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var navLinks = document.querySelectorAll('aside nav ul li a');
+    // Actualiza el selector para coincidir con la nueva estructura de la barra de navegación
+    var navLinks = document.querySelectorAll('nav ul li a');
 
     navLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
             event.preventDefault();
 
             // Obtener el id del elemento de destino.
-            var targetId = event.target.dataset.target;
+            var targetId = link.getAttribute('data-target'); // Usar getAttribute para asegurar la compatibilidad
             var targetSection = document.getElementById(targetId);
 
             // Ocultar todas las secciones.
