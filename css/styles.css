@@ -1,5 +1,7 @@
 /* Oculta todas las secciones dentro de <main> por defecto */
-main > section {
+#important-dates,
+#posters-abstracts,
+#speakers {
     display: none;
 }
 
