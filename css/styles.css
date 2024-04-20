@@ -12,35 +12,36 @@ header {
 }
 
 nav {
-    background: transparent; /* Se ajusta para que no interfiera con las cajas individuales */
-    text-align: center; /* Alinea los elementos del menú en el centro */
+    background: transparent;
+    text-align: center; /* Alinea los elementos de la lista en el centro si hay espacio extra */
 }
 
 nav ul {
-    display: flex; /* Dispone los elementos del menú en línea */
-    justify-content: center; /* Centra los elementos de la lista en el contenedor */
-    padding-left: 0; /* Elimina el padding que por defecto tienen las listas */
-    margin: 0; /* Elimina el margen por defecto */
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
+    justify-content: center; /* Centra los elementos de la lista horizontalmente */
+    padding-left: 0; /* Elimina el padding por defecto de las listas */
+    margin-top: 0; /* Asegura que no haya margen en la parte superior */
+    list-style: none; /* Elimina los marcadores de la lista */
 }
 
 nav ul li {
-    list-style-type: none; /* Elimina los marcadores de lista */
-    margin: 10px; /* Margen alrededor de los elementos de la lista */
+    margin: 0 10px; /* Añade un margen horizontal entre los elementos de la lista */
 }
 
-nav ul li a {
-    display: block; /* Hace que los enlaces llenen las cajas */
-    padding: 10px 20px; /* Espaciado dentro de las cajas */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para las cajas */
-    color: #e6e6e6; /* Color del texto */
-    border-radius: 5px; /* Bordes redondeados para las cajas */
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+nav a {
+    display: block; /* Hace que el enlace llene la altura de la lista 'li' */
+    padding: 10px 15px; /* Espaciado dentro de cada enlace */
+    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo para cada enlace */
+    color: #e6e6e6; /* Color de texto para cada enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para interacciones */
+    text-decoration: none; /* Elimina el subrayado del texto */
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo un poco más claro al pasar el mouse */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambio de color al pasar el cursor */
 }
-/* Oculta todas las secciones dentro de <main> por defecto */
+
 #important-dates,
 #posters-abstracts,
 #speakers {
