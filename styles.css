@@ -1,4 +1,7 @@
 /* Agrega estos estilos al archivo styles.css existente */
+#important-dates, #posters-abstracts, #speakers {
+    display: none;
+}
 
 .conference-poster img {
     width: 100%;
