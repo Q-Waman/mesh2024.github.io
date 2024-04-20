@@ -9,29 +9,8 @@
     display: block;
 }
 
-.conference-poster img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.conference-poster h1 {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.conference-poster p {
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-.home-section {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.home-section button {
+/* Estilos generales para los botones dentro de #home */
+#home button {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
@@ -42,9 +21,28 @@
     font-size: 16px;
 }
 
-.home-section button:hover {
+#home button:hover {
     background-color: #0056b3;
 }
+
+/* Asegura que los textos y las imágenes dentro de #home estén bien formateados */
+#home .conference-poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#home .conference-poster h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#home .conference-poster p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
 
 #important-dates h2 {
     font-size: 24px; /* Ajusta el tamaño según prefieras */
