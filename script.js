@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Ocultar todas las secciones al inicio
+    document.querySelectorAll('main > section').forEach(function (section) {
+        section.style.display = 'none';
+    });
+
     var navLinks = document.querySelectorAll('aside nav ul li a');
 
     navLinks.forEach(function (link) {
@@ -6,21 +11,22 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
 
             // Obtener el id del elemento de destino.
-            var targetId = event.target.getAttribute('data-target');
+            var targetId = event.target.dataset.target;
             var targetSection = document.getElementById(targetId);
 
             // Ocultar todas las secciones.
             document.querySelectorAll('main > section').forEach(function (section) {
-                section.classList.remove('visible-section');
+                section.style.display = 'none';
             });
 
             // Si la sección existe, muéstrala.
             if (targetSection) {
-                targetSection.classList.add('visible-section');
+                targetSection.style.display = 'block';
             }
         });
     });
 });
+
 
 
 
