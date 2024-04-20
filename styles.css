@@ -1,51 +1,38 @@
-body {
-    font-family: Arial, sans-serif;
-}
+/* Agrega estos estilos al archivo styles.css existente */
 
-header {
-    text-align: center;
-}
-
-header img {
+.conference-poster img {
     width: 100%;
     height: auto;
-}
-
-aside {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    background-color: #f8f8f8;
-    overflow: auto;
-}
-
-aside nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-aside nav ul li a {
     display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
+    margin: 0 auto;
 }
 
-aside nav ul li a:hover {
-    background-color: #ddd;
+.conference-poster h1 {
+    text-align: center;
+    margin: 20px 0;
 }
 
-main {
-    margin-left: 200px;
-    padding: 20px;
-}
-
-section {
+.conference-poster p {
+    text-align: justify;
     margin-bottom: 20px;
 }
 
+.forms-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.forms-section button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
+.forms-section button:hover {
+    background-color: #0056b3;
+}
