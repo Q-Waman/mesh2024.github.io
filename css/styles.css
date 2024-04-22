@@ -65,63 +65,72 @@ nav a:hover {
 
 .main-content {
     display: flex;
-    align-items: center; /* Centers items vertically */
-    justify-content: space-around; /* Space between image and content */
+    align-items: center;
+    justify-content: space-around; /* Space between the text and the image */
     margin: 0 auto;
-    max-width: 1200px; /* Maximum width preference */
+    max-width: 1200px; /* Or whatever maximum width you prefer */
 }
 
 .conference-content-wrapper {
-    display: flex; /* Establishes a flex container */
-    align-items: center; /* Vertically centers the flex items */
-    justify-content: space-between; /* Horizontally space out the items */
-    padding: 20px 0; /* Add vertical padding for aesthetics */
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: flex-start; /* Aligns content to the start (left) */
+    padding: 20px 0; /* Vertical padding */
+    width: 100%; /* Uses the full width available */
 }
 
 .conference-poster,
 .conference-info {
-    flex-basis: 50%; /* Assigns an initial width of 50% to each element */
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left; /* Text aligned to the left */
 }
 
-.conference-poster img,
+.conference-poster {
+    flex: 1;
+    order: 2; /* The image will be placed after the text */
+}
+
 .conference-info {
-    max-width: 100%; /* Ensures content is responsive and doesn't overflow */
-    height: auto; /* Keeps the aspect ratio of the image */
+    flex: 1;
+    order: 1; /* The text will be placed before the image */
+    flex-direction: column; /* Stacks the title, text, and buttons vertically */
+}
+
+.conference-info h1,
+.conference-info p,
+.buttons {
+    align-self: flex-start; /* Aligns these elements to the start of the flex container */
 }
 
 .buttons {
     display: flex;
-    flex-direction: column; /* Stacks buttons vertically */
-    justify-content: center;
+    justify-content: flex-start; /* Aligns buttons to the start (left side) */
+    gap: 10px; /* Space between buttons */
 }
 
 button {
-    margin-top: 10px; /* Adds space between buttons */
-    padding: 10px 20px; /* Adds padding inside buttons */
-    width: auto; /* Sets button width to fit content */
-    align-self: center; /* Centers buttons in the flex container */
+    padding: 10px 20px; /* Padding inside buttons */
 }
-
 
 /* Responsive design for small screens */
 @media (max-width: 768px) {
-    .main-content,
     .conference-content-wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse; /* Stacks elements vertically on small screens */
     }
 
     .conference-poster,
     .conference-info {
         width: 100%; /* Elements take full width on small screens */
+        order: unset; /* Removes the order rule on small screens */
     }
 
     .buttons {
         justify-content: center; /* Centers buttons on small screens */
     }
 }
+
 
 
 #important-dates table {
