@@ -63,46 +63,35 @@ nav a:hover {
     opacity: 1;
 }
 
-/* Estilos para la sección en general */
-#home .conference-poster {
+.content-wrapper {
     display: flex;
-    flex-wrap: wrap; /* Esto permite la responsividad, los elementos se apilan en pantallas pequeñas */
-    align-items: center; /* Alineación vertical */
-    justify-content: center; /* Alineación horizontal */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
 }
 
-/* Estilos para la imagen */
-#home .conference-poster {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten según el tamaño de la pantalla */
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+.conference-poster,
+.conference-info {
+    flex: 1; /* Ambos toman el mismo espacio */
 }
 
-#home .conference-poster img {
-    flex: 1 1 50%; /* Toma hasta el 50% del espacio disponible */
-    max-width: 50%;
-    height: auto;
+.conference-info {
+    padding: 20px; /* Espacio alrededor del contenido */
 }
 
-#home .conference-poster .content {
-    flex: 1 1 50%; /* Toma hasta el 50% del espacio disponible */
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.conference-info h1,
+.conference-info p {
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente del texto */
 }
 
-#home .conference-poster .content .buttons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.buttons button {
+    padding: 10px 20px; /* Más espacio dentro de los botones */
+    font-size: 1.2em; /* Tamaño de fuente más grande para los botones */
 }
 
-#home .conference-poster .content .buttons button {
-    margin-top: 10px; /* Añade un espacio entre botones */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Acomodo vertical en dispositivos más pequeños */
+    }
 }
 
 #important-dates table {
