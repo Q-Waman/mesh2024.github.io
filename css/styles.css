@@ -63,60 +63,36 @@ nav a:hover {
     opacity: 1;
 }
 
-/* Estilos generales para los botones dentro de #home */
+/* Estilos para la sección en general */
 #home .conference-poster {
     display: flex;
-    align-items: center; /* Alinea verticalmente */
-    justify-content: center; /* Alinea horizontalmente */
-    gap: 20px; /* Espacio entre la imagen y el contenido del texto */
-    margin: 0 auto; /* Centrado horizontal */
-    max-width: 1200px; /* Ancho máximo para el contenedor, ajústalo según tus necesidades */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    flex-wrap: wrap; /* Esto permite la responsividad, los elementos se apilan en pantallas pequeñas */
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
 }
 
-/* Estilo específico para la imagen */
+/* Estilos para la imagen */
 #home .conference-poster img {
-    flex-basis: 50%; /* La imagen ocupa aproximadamente la mitad del contenedor */
-    max-width: 50%; /* Previene que la imagen sea más grande de lo que debería */
-    height: auto; /* Mantiene la relación de aspecto */
+    flex: 1; /* La imagen puede crecer */
+    max-width: 50%; /* Máximo de la mitad del ancho */
+    height: auto; /* Para mantener la proporción */
 }
 
-/* Contenedor para el texto y los botones */
-#home .text-container {
-    flex-basis: 50%; /* El texto ocupa aproximadamente la mitad del contenedor */
-    max-width: 50%; /* Previene que el texto sea más grande de lo que debería */
+/* Estilos para el contenedor de contenido y botones */
+#home .conference-poster .content {
+    flex: 2; /* El contenido puede crecer el doble que la imagen */
+    max-width: 50%; /* Máximo de la mitad del ancho */
+    padding: 20px; /* Añadir algo de relleno */
 }
 
-/* Estilo para botones, ahora más grandes */
-#home button {
-    background-color: #5563c1;
-    color: white;
-    padding: 15px 30px; /* Padding más grande para botones más grandes */
-    margin: 10px; /* Espacio alrededor de los botones */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px; /* Fuente más grande para los botones */
-    transition: background-color 0.3s, transform 0.3s;
-    width: auto; /* Esto permitirá que el botón tenga el tamaño de su contenido */
+/* Estilos para los botones */
+#home .conference-poster .buttons button {
+    padding: 15px 30px; /* Botones más grandes */
+    margin: 10px; /* Espacio entre botones */
+    font-size: 18px; /* Tamaño de texto más grande */
+    /* Resto de tus estilos de botones */
 }
 
-#home button:hover {
-    background-color: #6f7dcc;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave opcional para el hover */
-}
-
-/* Estilos para h1, h2, h3 y p dentro del contenedor de texto */
-#home .conference-poster h1,
-#home .conference-poster h2,
-#home .conference-poster h3,
-#home .conference-poster p {
-    /* Ajusta estos estilos como prefieras */
-    margin-bottom: 20px; /* Margen al final de cada elemento */
-    text-align: left; /* Alineación a la izquierda en lugar de centrado */
-    color: #e6e6e6;
-}
 
 #important-dates table {
     width: 100%;
