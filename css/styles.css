@@ -71,18 +71,38 @@ nav a:hover {
     max-width: 1200px; /* O el ancho máximo que prefieras */
 }
 
-/* Contenedor para la imagen */
-.conference-poster {
-    flex: none; /* Esto evita que la imagen se ajuste */
-    width: 50%; /* Ajusta esto según el tamaño de tu imagen */
+.conference-content-wrapper {
+    display: flex; /* Establishes a flex container */
+    align-items: center; /* Vertically centers the flex items */
+    justify-content: space-between; /* Horizontally space out the items */
+    padding: 20px 0; /* Add vertical padding for aesthetics */
 }
 
-/* Contenedor para el contenido de texto y botones */
+.conference-poster,
 .conference-info {
-    flex: none; /* Esto evita que el contenido se ajuste */
-    width: 50%; /* Ajusta esto para que el texto y los botones se ajusten al lado de la imagen */
-    padding: 20px;
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
+    flex-basis: 50%; /* Assigns an initial width of 50% to each element */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conference-poster img,
+.conference-info {
+    max-width: 100%; /* Ensures content is responsive and doesn't overflow */
+    height: auto; /* Keeps the aspect ratio of the image */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stacks buttons vertically */
+    justify-content: center;
+}
+
+button {
+    margin-top: 10px; /* Adds space between buttons */
+    padding: 10px 20px; /* Adds padding inside buttons */
+    width: auto; /* Sets button width to fit content */
+    align-self: center; /* Centers buttons in the flex container */
 }
 
 /* Responsive design para pantallas pequeñas */
