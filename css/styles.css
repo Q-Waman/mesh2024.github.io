@@ -72,27 +72,38 @@ nav a:hover {
 }
 
 /* Estilos para la imagen */
+#home .conference-poster {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten según el tamaño de la pantalla */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
 #home .conference-poster img {
-    flex: 1; /* La imagen puede crecer */
-    max-width: 50%; /* Máximo de la mitad del ancho */
-    height: auto; /* Para mantener la proporción */
+    flex: 1 1 50%; /* Toma hasta el 50% del espacio disponible */
+    max-width: 50%;
+    height: auto;
 }
 
-/* Estilos para el contenedor de contenido y botones */
 #home .conference-poster .content {
-    flex: 2; /* El contenido puede crecer el doble que la imagen */
-    max-width: 50%; /* Máximo de la mitad del ancho */
-    padding: 20px; /* Añadir algo de relleno */
+    flex: 1 1 50%; /* Toma hasta el 50% del espacio disponible */
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* Estilos para los botones */
-#home .conference-poster .buttons button {
-    padding: 15px 30px; /* Botones más grandes */
-    margin: 10px; /* Espacio entre botones */
-    font-size: 18px; /* Tamaño de texto más grande */
-    /* Resto de tus estilos de botones */
+#home .conference-poster .content .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
+#home .conference-poster .content .buttons button {
+    margin-top: 10px; /* Añade un espacio entre botones */
+}
 
 #important-dates table {
     width: 100%;
