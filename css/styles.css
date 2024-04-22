@@ -72,50 +72,39 @@ nav a:hover {
 }
 
 .conference-content-wrapper {
-    display: flex;
-    flex-direction: row-reverse; /* Flips the order so the text is first */
-    align-items: center; /* Centers items vertically */
-    justify-content: space-between; /* Space out items horizontally */
-    padding: 20px; /* Padding for aesthetics */
-    width: 100%; /* Full width to contain both elements */
+    display: flex; /* Establishes a flex container */
+    align-items: center; /* Vertically centers the flex items */
+    justify-content: space-between; /* Horizontally space out the items */
+    padding: 20px 0; /* Add vertical padding for aesthetics */
 }
 
 .conference-poster,
 .conference-info {
-    flex: 1; /* Both children share the space equally */
+    flex-basis: 50%; /* Assigns an initial width of 50% to each element */
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left; /* Aligns text to the left */
 }
 
-.conference-poster img {
-    max-width: 100%; /* Image responsive to its container */
-    height: auto; /* Maintain aspect ratio */
-}
-
+.conference-poster img,
 .conference-info {
-    flex-direction: column; /* Stack elements vertically */
-}
-
-.conference-info h1 {
-    margin-bottom: 0.5em; /* Spacing between title and text */
-}
-
-.conference-info p {
-    margin-bottom: 1em; /* Spacing between text and buttons */
+    max-width: 100%; /* Ensures content is responsive and doesn't overflow */
+    height: auto; /* Keeps the aspect ratio of the image */
 }
 
 .buttons {
     display: flex;
-    justify-content: flex-start; /* Aligns buttons to the start */
-    gap: 1em; /* Space between buttons */
+    flex-direction: column; /* Stacks buttons vertically */
+    justify-content: center;
 }
 
 button {
-    padding: 10px 20px; /* Padding inside buttons */
-    /* Margin-top removed, no longer needed */
+    margin-top: 10px; /* Adds space between buttons */
+    padding: 10px 20px; /* Adds padding inside buttons */
+    width: auto; /* Sets button width to fit content */
+    align-self: center; /* Centers buttons in the flex container */
 }
+
 
 /* Responsive design for small screens */
 @media (max-width: 768px) {
