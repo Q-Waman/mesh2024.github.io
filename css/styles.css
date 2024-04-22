@@ -92,12 +92,14 @@ nav a:hover {
     text-align: center; /* This ensures that the text within the container is also centered */
     flex: 1; /* Takes up the correct amount of space */
     max-width: 50%; /* Adjust this as necessary to fit the left space */
+    font-size: 20px;
 }
 
 .buttons {
     display: flex;
     justify-content: center; /* Centers buttons horizontally */
     gap: 10px; /* Space between buttons */
+    font-size: 20px;
 }
 
 @media (max-width: 768px) {
