@@ -84,18 +84,21 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left; /* Aligns text to the left */
 }
 
 .conference-poster img,
-.conference-info {
-    max-width: 100%; /* Ensures content is responsive and doesn't overflow */
-    height: auto; /* Keeps the aspect ratio of the image */
+.conference-info h1 {
+    margin-bottom: 16px; /* Spacing between title and paragraph */
+}
+
+.conference-info p {
+    margin-bottom: 20px; /* Spacing between paragraph and buttons */
 }
 
 .buttons {
     display: flex;
-    flex-direction: column; /* Stacks buttons vertically */
-    justify-content: center;
+    justify-content: space-between; /* Evenly spaces buttons horizontally */
 }
 
 button {
