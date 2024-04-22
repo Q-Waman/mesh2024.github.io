@@ -65,60 +65,32 @@ nav a:hover {
 
 .conference-section {
     display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: space-between; /* Espaciado entre imagen y contenido */
+    flex-wrap: wrap; /* Esto permite que los elementos se reorganicen si no hay espacio suficiente */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
 }
 
-.conference-content-wrapper {
-    display: flex;
-    flex-wrap: wrap; /* Asegura que los elementos se ajusten en lugar de solaparse */
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* Espacio entre la imagen y el contenido */
-}
-
-.conference-poster {
-    flex: 1;
-    max-width: 50%; /* Ajusta esto para controlar el tamaño de la imagen */
+.conference-poster,
+.conference-info {
+    flex: 1; /* Esto permite que los elementos crezcan para llenar el espacio */
+    flex-shrink: 0; /* Previene que los elementos se reduzcan más de lo necesario */
+    width: 50%; /* Establece un ancho inicial */
 }
 
 .conference-info {
-    flex: 1;
-    max-width: 50%; /* Ajusta esto para controlar el tamaño del texto */
-    padding: 20px;
+    z-index: 1; /* Asegura que el texto esté encima de cualquier otro contenido */
+    margin-left: 20px; /* Añade un poco de espacio entre la imagen y el texto */
 }
 
-/* Ajusta el tamaño del texto y los botones */
-.conference-info h1 {
-    font-size: 2.5em; 
-}
-
-.conference-info p {
-    font-size: 1.2em;
-}
-
-.buttons button {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-
+/* Es posible que también necesites ajustar el media query para móviles */
 @media (max-width: 768px) {
-    .conference-content-wrapper {
-        flex-direction: column;
-    }
-
     .conference-poster,
     .conference-info {
-        max-width: 100%; /* Los elementos ocupan todo el ancho en dispositivos móviles */
-    }
-
-    .conference-info {
-        order: 1; /* Asegura que el texto se muestre antes de la imagen en móviles */
+        width: 100%; /* Los elementos toman todo el ancho en móviles */
+        order: 2; /* Asegura que el texto venga primero en móviles si es necesario */
     }
 
     .conference-poster {
-        order: 2; /* La imagen va después del texto en móviles */
+        order: 1; /* La imagen puede ir después del texto en móviles */
     }
 }
 
