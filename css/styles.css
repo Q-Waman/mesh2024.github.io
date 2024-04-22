@@ -63,37 +63,39 @@ nav a:hover {
     opacity: 1;
 }
 
-.conference-section {
+.main-content {
     display: flex;
-    flex-wrap: wrap; /* Esto permite que los elementos se reorganicen si no hay espacio suficiente */
-    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    align-items: center;
+    justify-content: space-around; /* Espacio entre la imagen y el contenido */
+    margin: 0 auto;
+    max-width: 1200px; /* O el ancho máximo que prefieras */
 }
 
-.conference-poster,
+/* Contenedor para la imagen */
+.conference-poster {
+    flex: none; /* Esto evita que la imagen se ajuste */
+    width: 50%; /* Ajusta esto según el tamaño de tu imagen */
+}
+
+/* Contenedor para el contenido de texto y botones */
 .conference-info {
-    flex: 1; /* Esto permite que los elementos crezcan para llenar el espacio */
-    flex-shrink: 0; /* Previene que los elementos se reduzcan más de lo necesario */
-    width: 50%; /* Establece un ancho inicial */
+    flex: none; /* Esto evita que el contenido se ajuste */
+    width: 50%; /* Ajusta esto para que el texto y los botones se ajusten al lado de la imagen */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
 }
 
-.conference-info {
-    z-index: 1; /* Asegura que el texto esté encima de cualquier otro contenido */
-    margin-left: 20px; /* Añade un poco de espacio entre la imagen y el texto */
-}
-
-/* Es posible que también necesites ajustar el media query para móviles */
+/* Responsive design para pantallas pequeñas */
 @media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
     .conference-poster,
     .conference-info {
-        width: 100%; /* Los elementos toman todo el ancho en móviles */
-        order: 2; /* Asegura que el texto venga primero en móviles si es necesario */
-    }
-
-    .conference-poster {
-        order: 1; /* La imagen puede ir después del texto en móviles */
+        width: 100%; /* Los elementos toman todo el ancho en pantallas pequeñas */
     }
 }
-
 
 #important-dates table {
     width: 100%;
