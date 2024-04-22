@@ -65,72 +65,54 @@ nav a:hover {
 
 .main-content {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around; /* Space between the text and the image */
     margin: 0 auto;
-    max-width: 1200px; /* Or whatever maximum width you prefer */
+    max-width: 1200px; /* Or your preferred maximum width */
 }
 
 .conference-content-wrapper {
     display: flex;
-    align-items: center; /* Centers items vertically */
-    justify-content: flex-start; /* Aligns content to the start (left) */
-    padding: 20px 0; /* Vertical padding */
-    width: 100%; /* Uses the full width available */
-}
-
-.conference-poster,
-.conference-info {
-    display: flex;
-    justify-content: center;
+    justify-content: space-around; /* Adjust this as needed */
     align-items: center;
-    text-align: left; /* Text aligned to the left */
+    width: 100%;
 }
 
 .conference-poster {
     flex: 1;
-    order: 2; /* The image will be placed after the text */
+    /* Ensure the poster is not stretching beyond its content */
+    align-self: flex-start; /* Align the poster to the top if needed */
 }
 
 .conference-info {
     flex: 1;
-    order: 1; /* The text will be placed before the image */
-    flex-direction: column; /* Stacks the title, text, and buttons vertically */
-}
-
-.conference-info h1,
-.conference-info p,
-.buttons {
-    align-self: flex-start; /* Aligns these elements to the start of the flex container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content horizontally in the container */
+    align-items: center; /* Centers content vertically in the container */
+    text-align: center; /* Centers text horizontally */
 }
 
 .buttons {
     display: flex;
-    justify-content: flex-start; /* Aligns buttons to the start (left side) */
+    justify-content: center; /* Centers buttons horizontally */
     gap: 10px; /* Space between buttons */
 }
 
-button {
-    padding: 10px 20px; /* Padding inside buttons */
-}
-
-/* Responsive design for small screens */
 @media (max-width: 768px) {
     .conference-content-wrapper {
-        flex-direction: column-reverse; /* Stacks elements vertically on small screens */
+        flex-direction: column-reverse;
     }
 
     .conference-poster,
     .conference-info {
-        width: 100%; /* Elements take full width on small screens */
-        order: unset; /* Removes the order rule on small screens */
+        width: 100%;
     }
 
     .buttons {
-        justify-content: center; /* Centers buttons on small screens */
+        justify-content: center;
     }
 }
-
 
 
 #important-dates table {
